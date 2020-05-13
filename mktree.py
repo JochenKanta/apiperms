@@ -24,11 +24,12 @@ def create_parser():
 def create_skeleton(args):
     RC.fs.create_directory(name=args.name, dir_path=args.root)
     skeleton_parent = os.path.join(args.root, args.name)
+    RC.fs.set_acl_v2(path=skeleton_parent, acl=CHILD_QACL)
     for directory in DIRECTORY_SKELETON:
         full_path = os.path.join(skeleton_parent, directory)
         dir_path, name = os.path.split(full_path)
         RC.fs.create_directory(dir_path=dir_path, name=name)
-        RC.fs.set_acl_v2(path=args.root, acl=CHILD_QACL)
+        RC.fs.set_acl_v2(path=full_path, acl=CHILD_QACL)
 
 
 def main():

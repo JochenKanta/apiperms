@@ -19,8 +19,6 @@ from configuration import *
 
 def setroot(root):
     path, name = posixpath.split(root)
-    print(path)
-    print(name)
     try:
         RC.fs.create_directory(name=name, dir_path=path)
     except RequestError as e:
