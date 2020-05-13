@@ -1,0 +1,61 @@
+{
+    "aces": [
+        {
+            "flags": [
+                "OBJECT_INHERIT",
+                "CONTAINER_INHERIT"
+            ],
+            "rights": [
+                "READ",
+                "READ_EA",
+                "READ_ATTR",
+                "READ_ACL",
+                "WRITE_EA",
+                "WRITE_ATTR",
+                "WRITE_ACL",
+                "CHANGE_OWNER",
+                "WRITE_GROUP",
+                "DELETE",
+                "EXECUTE",
+                "MODIFY",
+                "EXTEND",
+                "DELETE_CHILD",
+                "SYNCHRONIZE"
+            ],
+            "trustee": {
+                "auth_id": "REPLACE_WITH_ADMINS_GROUP_AUTHID",
+                "domain": "ACTIVE_DIRECTORY",
+                "gid": null,
+                "name": "REPLACE_WITH_ADMINS_GROUP_NAME",
+                "sid": "REPLACE_WITH_ADMINS_GROUP_SID",
+                "uid": null
+            },
+            "type": "ALLOWED"
+        },
+        {
+            "flags": [],
+            "rights": [
+                "READ",
+                "READ_EA",
+                "READ_ATTR",
+                "READ_ACL",
+                "EXECUTE",
+                "SYNCHRONIZE"
+            ],
+            "trustee": {
+                "auth_id": "REPLACE_WITH_USERS_GROUP_AUTHID",
+                "domain": "ACTIVE_DIRECTORY",
+                "gid": null,
+                "name": "REPLACE_WITH_USERS_GROUP_NAME",
+                "sid": "REPLACE_WITH_USERS_GROUP_SID",
+                "uid": null
+            },
+            "type": "ALLOWED"
+        }
+    ],
+    "control": [
+        "PRESENT",
+        "AUTO_INHERIT"
+    ],
+    "posix_special_permissions": []
+}
